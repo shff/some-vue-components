@@ -4,6 +4,9 @@
     <Alert error>Alert!</Alert>
     <Alert warning>Alert!</Alert>
     <Alert info>Alert!</Alert>
+    <Accordion title="My Title">
+      Contents
+    </Accordion>
   </div>
 </template>
 
