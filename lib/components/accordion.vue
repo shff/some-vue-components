@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      class="mb3 pa3 bg-moon-gray b--white-40 bt bw2 flex-ns sans-serif white"
-      @click="open = !open">
+      v-toggle="open"
+      class="mb3 pa3 bg-moon-gray b--white-40 bt bw2 flex-ns sans-serif white">
       <span class="white f6 ttu flex-auto">{{ title }}</span>
       <span class="f4 lh-solid white">{{ open ? '－' : '＋' }}</span>
     </div>
