@@ -7,11 +7,25 @@
     <Accordion title="My Title">
       Contents
     </Accordion>
+    <div v-stick>
+      <button @click="hm">click</button>
+      <div v-html="content"></div>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: "App",
+    data() {
+      return {
+        content: "asdf",
+      };
+    },
+    methods: {
+      hm() {
+        this.content += "simm<br>";
+      },
+    },
   };
 </script>
