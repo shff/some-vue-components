@@ -7,6 +7,10 @@
     <Accordion title="My Title">
       Contents
     </Accordion>
+    <Btn info>Button</Btn>
+    <Btn danger>Button</Btn>
+    <Btn success>Button</Btn>
+    <Btn warning>Button</Btn>
   </div>
 </template>
 
