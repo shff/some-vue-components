@@ -7,6 +7,7 @@
     <Accordion title="My Title">
       Contents
     </Accordion>
+    <Btn>Button</Btn>
     <Btn info>Button</Btn>
     <Btn danger>Button</Btn>
     <Btn success>Button</Btn>

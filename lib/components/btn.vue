@@ -1,13 +1,17 @@
 <template>
   <button
     :class="{
-      'bg-green hover-bg-dark-green': success,
-      'bg-red hover-bg-dark-red': danger,
-      'bg-gold': warning,
-      'bg-blue hover-bg-dark-blue': !success && !warning && !danger,
+      'btn-primary': primary,
+      'btn-primary bg-blue': info,
+      'btn-primary bg-red': danger,
+      'btn-primary bg-yellow black': warning,
+      'btn-primary bg-green': success,
+      'btn-big': big,
+      'circle x4 y4': fab,
+      'fixed m3 bottom-0 right-0 z2 shadow2': fixed,
     }"
     :type="submit ? 'submit' : 'button'"
-    class="pointer white ttu sans-serif pv2 ph3 lh-copy br2 bn f5"
+    class="btn upcase shadow0 rounded ease center no-select"
     @click.prevent="$emit('click')">
     {{ label }}
     <slot />
@@ -36,6 +40,22 @@
         default: false,
       },
       success: {
+        type: Boolean,
+        default: false,
+      },
+      info: {
+        type: Boolean,
+        default: false,
+      },
+      fab: {
+        type: Boolean,
+        default: false,
+      },
+      fixed: {
+        type: Boolean,
+        default: false,
+      },
+      big: {
         type: Boolean,
         default: false,
       },

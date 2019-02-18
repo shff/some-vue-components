@@ -1,16 +1,18 @@
 <template>
-  <div>
+  <div class="my2">
     <div
-      v-toggle="open"
-      class="mb3 pa3 bg-moon-gray b--white-40 bt bw2 flex-ns sans-serif white">
-      <span class="white f6 ttu flex-auto">{{ title }}</span>
-      <span class="f4 lh-solid white">{{ open ? '－' : '＋' }}</span>
+      class="px2 py1 bg-silver gray pointer flex justify-between items-center"
+      @click="show = !show">
+      <div class="h6 upcase bold">{{ title }}</div>
+      <div class="h4 bold">{{ show ? '-' : '+' }}</div>
     </div>
-    <div
-      v-if="open"
-      class="pa3">
-      <slot />
-    </div>
+    <FadeTransition>
+      <div
+        v-if="show"
+        class="p2 ease truncate">
+        <slot />
+      </div>
+    </FadeTransition>
   </div>
 </template>
 
@@ -25,7 +27,7 @@
     },
     data() {
       return {
-        open: false,
+        show: false,
       };
     },
   };
