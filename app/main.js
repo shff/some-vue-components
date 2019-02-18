@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Lib from "..";
+import Lib from "../lib";
 import App from "./app.vue";
 
 Vue.use(Lib);
