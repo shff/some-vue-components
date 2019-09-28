@@ -44,7 +44,7 @@
 </template>
 
 <script>
-  import format from "v-mask/src/format";
+  import format from "text-mask-core/src/conformToMask";
 
   export default {
     name: "InputBox",
@@ -144,7 +144,8 @@
       changed() {
         if (this.mask &&
         (!this.value || this.$refs.input.value.length > this.value.length)) {
-          this.$refs.input.value = format(this.$refs.input.value, this.mask);
+          this.$refs.input.value = format(this.$refs.input.value, this.mask,
+            { guide: false });
         }
         this.$emit("input", this.$refs.input.value);
       },
